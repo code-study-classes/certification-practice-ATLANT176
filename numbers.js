@@ -32,3 +32,45 @@ export function swapHundredsAndTens(twoDigitNumbers) {
   const numbers = twoDigitNumberStr.charAt(2);
   return parseInt(`${tens}${hundreds}${numbers}`);
 }
+
+export function getHundredsDigit(number) {
+  const b = Math.floor(number / 100);
+  const result = Math.floor(b % 10);
+  return result;
+}
+
+export function getFullHours(seconds) {
+  const minutes = seconds / 60;
+  const hours = (minutes / 60);
+  return Math.floor(hours);
+}
+
+export function getDayOfWeek(dayOfYear) {
+  switch (dayOfYear % 7) {
+    case 1:
+      return 1;
+      break;
+    case 2:
+      return 2;
+      break;
+    case 3:
+      return 3;
+      break;
+    case 4:
+      return 4;
+      break;
+    case 5:
+      return 5;
+      break;
+    case 6:
+      return 6;
+      break;
+    case 0:
+      return 0;
+      break;
+  }
+}
+
+export function countSquares(A, B, C) {
+  return Math.floor(A / C) * Math.floor(B / C);
+}
