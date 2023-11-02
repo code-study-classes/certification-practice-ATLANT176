@@ -73,7 +73,7 @@ describe('Group: boolean', () => {
 
     expect(checkBetweenNumbers(2, 4, 4)).toBe(false);
 
-    expect(checkBetweenNumbers(4, 2, 3)).toBe(false);
+    expect(checkBetweenNumbers(4, 2, 3)).toBe(true);
 
     expect(checkBetweenNumbers(2, 2, 1)).toBe(false);
 

@@ -53,6 +53,15 @@ export function countWordsWithA(sentence) {
 
 export function normalizeSpaces(sentence) {
   const normalAround = sentence.trim();
-  const normalAll = normalAround;
-  return normalAll;
+  const normalAll = normalAround.replace(/ +/g, ' ');
+  const normalAllMuch = normalAll.trim();
+  return normalAllMuch;
+}
+
+export function extractFileName(fullFileName) {
+  const massiveFileName = fullFileName.split('/');
+  const lastMassiveParametr = massiveFileName[massiveFileName.length - 1];
+  const fileName = lastMassiveParametr.split('.');
+  const fullFileNameResult = fileName[0];
+  return fullFileNameResult;
 }
