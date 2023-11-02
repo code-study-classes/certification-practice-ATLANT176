@@ -1,5 +1,3 @@
-import { file } from '@babel/types';
-
 export function calculateDistance(x1, x2) {
   return Math.abs(x1 - x2);
 }
@@ -21,8 +19,9 @@ export function calculateSegments(lengthA, lengthB) {
 
 export function calculateDigitSum(twoDigitNumbers) {
   const twoDigitNumberStr = twoDigitNumbers.toString();
-  const resultNumber = parseInt(twoDigitNumberStr.charAt(0)) + parseInt(twoDigitNumberStr.charAt(1));
-  return resultNumber;
+  const resultNumber = parseInt(twoDigitNumberStr.charAt(0), 10);
+  const resultNumber2 = parseInt(twoDigitNumberStr.charAt(1), 10);
+  return resultNumber + resultNumber2;
 }
 
 export function swapHundredsAndTens(twoDigitNumbers) {
@@ -30,7 +29,7 @@ export function swapHundredsAndTens(twoDigitNumbers) {
   const hundreds = twoDigitNumberStr.charAt(0);
   const tens = twoDigitNumberStr.charAt(1);
   const numbers = twoDigitNumberStr.charAt(2);
-  return parseInt(`${tens}${hundreds}${numbers}`);
+  return parseInt(`${tens}${hundreds}${numbers}`, 10);
 }
 
 export function getHundredsDigit(number) {
@@ -49,25 +48,20 @@ export function getDayOfWeek(dayOfYear) {
   switch (dayOfYear % 7) {
     case 1:
       return 1;
-      break;
     case 2:
       return 2;
-      break;
     case 3:
       return 3;
-      break;
     case 4:
       return 4;
-      break;
     case 5:
       return 5;
-      break;
     case 6:
       return 6;
-      break;
     case 0:
       return 0;
-      break;
+    default:
+      return dayOfYear;
   }
 }
 

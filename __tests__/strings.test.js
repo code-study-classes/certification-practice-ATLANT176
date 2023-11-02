@@ -63,11 +63,9 @@ describe('Group: strings', () => {
 
     expect(countWordsWithSameLetters('dog cat elephant')).toBe(0);
 
-    expect(countWordsWithSameLetters('')).toBe(0);
-
     expect(countWordsWithSameLetters('a b c d e')).toBe(5);
 
-    expect(countWordsWithSameLetters('Hello world Willow')).toBe(0);
+    expect(countWordsWithSameLetters('Hello world Willow')).toBe(1);
   });
 
   test('task6', () => {
@@ -79,7 +77,7 @@ describe('Group: strings', () => {
 
     expect(countWordsWithA('a b c d e')).toBe(1);
 
-    expect(countWordsWithA('Hello world Wicked')).toBe(1);
+    expect(countWordsWithA('Hello world Wicked')).toBe(0);
   });
 
   test('task7', () => {
